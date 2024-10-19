@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang= "es">
+<head> 
+	<title>Duelo</title>
+	<meta charset= "utf-8">
+	<link href= "vista.css" rel= "stylesheet" type= "text/css">
+	<script src= "js.js"> </script>
+    <link rel="icon" href="img/iconoo.ico">
+</head>
+    <body>
+        <header>
+            <div id="deidades">
+                <div id="sama1">
+                    <img class="samau" src="img/sama1.png" alt="sama1">
+                </div>
+                <div id="angel">
+                    <img class="angell" src="img/danshinkan.png" alt="angel">
+                </div>
+                <div id="sama2">
+                    <img class="samad" src="img/sama2.png" alt="sama2">
+                </div>
+            </div>
+        </header>
+        <main>
+            <form>
+                <div id="inicio">
+                    <div id="esferas">
+                        <img class="esferas" src="img/esferas.png" alt="esferas">
+                    </div>
+                    <div id="registro">
+                        <p>ESTAMOS EN LA BATALLA FINAL CONTRA JIREN. VAMOS A DERROTARLO PERO PRIMERO 
+                            NECESITAMOS SABER TU NOMBRE:
+                        </p>
+                        <input id="nombre" autofocus class="nombre" onfocus="escribir()" onblur="salir()" type="text" value="Ingresa tu nombre">
+                        <button id="envio" class="envio" type="button" onclick="subir()" onmouseover="sobre()" onmouseout="fuera()">VAMOS</button>
+                    </div>
+
+                    <div id="duelo">
+                        <p class="duelo">D U E L O</p>
+                    </div>
+                </div>
+            </form>  
+              <div id="juego">
+                   <div id="rivales"> 
+                        <div id="jugador">
+                            <p id="nombre_del_jugador"></p>
+                            <div id="mano">
+                                <img id="manoimg_jugador" class="jugador" src="img/1.png" alt="jugador piedra">
+                            </div>
+                        </div>
+                        <div id="medio">
+                            <img class="vs" id="vs" src="img/vs.png" alt="vs imagen"> 
+                        </div>
+                            <div id="maquina">
+                                <p id="nombre_de_la_maquina">Jiren</p>
+                                <div id="maquina_mano">
+                                    <p id="mano_maquina"><img id="mano_maquina_j" class="jiren" src="img/1jiren.png" alt="maquina piedra"></p>
+                                </div>
+                            </div>
+
+                    </div>     
+                        <div id="seleccion">
+                            <div id="pj"><a href="#" onmouseover="seleccion_p()" onclick="jugar(1)"><img id="l_p" class="mano_p" src="img/1.png" alt="mano de piedra"></a></div>
+                            <div id="tj"><a href="#" onmouseover="seleccion_t()" onclick="jugar(2)"><img id="l_t" class="mano_t" src="img/2.png" alt="mano de tijera"></a></div>
+                            <div id="paj"><a href="#" onmouseover="seleccion_pa()" onclick="jugar(3)"><img id="l_pa" class="mano_pa" src="img/3.png" alt="mano de papel"></a></div>
+                        </div>      
+              </div>
+              <div id="fin">
+                    <p id="resultado" class="resultado"></p>
+                    <div id="img_fin"> 
+                        <img id="imagen_goku" class="img_goku" src="img/gokuganar.png" alt="imagen de goku">
+                    </div>
+                    <button class="boton_fin" id="bot_fin" type="button" onmouseover="sobre()" onmouseout="fuera()" onclick="reiniciar()">Volver a jugar</button>
+
+              </div>
+        </main>
+        <footer id="footer">
+            <div id="puntos">
+                Victorias:<div id="imagen1"><img src="img/esfera_defecto.png" id="esfera_v" class="img_esfera1" alt="foto de esfera"></div>
+                Empates:<div id="imagen2"><img src="img/esfera_defecto.png" id="esfera_e" class="img_esfera2" alt="foto de esfera"></div>
+                Derrotas:<div id="imagen3"><img src="img/esfera_defecto.png" id="esfera_d" class="img_esfera3" alt="foto de esfera"></div>
+            </div>   
+            <p id="rondas" class="rondas">Ronda:1 de 7</p>
+        </footer>
+    </body>
+</html>
